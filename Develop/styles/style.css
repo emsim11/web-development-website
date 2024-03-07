@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+/* Header */
+
+div.Header-Main-Wrapper {
+    margin: 0;
+    background: url("file:///Users/emilysimone/Downloads/Background-Blue-1.jpg");
+}
+a.Logo {
+    padding: 10px;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    vertical-align: middle;
+    opacity: 0.8;
+}
+a.Logo:hover {
+    opacity: 0.9;
+}
+
+/* Scroll Menu */
+
+div.Scroll-Menu {
+    border-top: 1px solid #5aaafb;
+    border-bottom: 1px solid #5aaafb;
+    background-color: #a3cffa;
+    overflow: auto;
+    white-space: nowrap;
+    width: 100%;
+    position: sticky;
+}
+div.Scroll-Menu a {
+    display: inline-block;
+    color: #fafafa;
+    opacity: 0.75;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+div.Scroll-Menu a:hover {
+    opacity: 0.95;
+}
+
+/* Page Title Section */
+
+div.Icon {
+    padding-top: 20px;
+    display: grid;
+    place-items: center;
+}
+h2.Page-Title {
+    padding-top: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: "Klee One", Cursive;
+    font-size: x-large;
+}
+ul.Inner-Links {
+    padding-top: 5px;
+    list-style: none;
+    font-weight: 400;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+}
+li.Section-Link {   
+    justify-content: space-around;
+    padding-right: 10px;
+}
+li.Section-Link > a:link, li.Section-Link > a:visited, li.Section-Link > a:active {
+    color: #95c6f8;
+}
+li.Section-Link > a:hover {
+    color: #66aef7
+}
+p.Introduction {
+    margin: 15px;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* Page Sections */
+
+h3.Page-Section {
+    padding-top: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: large;
+}
+p.Section-Paragraph {
+    margin: 15px;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+p.Section-Paragraph-Projects {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+div.Developer-Community {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+figure.Dev-Community-Figures {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+figcaption.Dev-Community-Figure-Captions {
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+a.Dev-Community:link, a.Dev-Community:visited, a.Dev-Community:active {
+    color: #95c6f8;
+}
+a.Dev-Community:hover {
+    color: #66aef7;
+}
+div.Projects-Container {
+    --lerp-0: 1;
+    --lerp-1: 0.5787037;
+    --lerp-2: 0.2962963;
+    --lerp-3: 0.125;
+    --lerp-4: 0.037037;
+    --lerp-5: 0.0046296;
+    --lerp-6: 0;
+    margin: 0;
+    padding: 0;
+}
+ul.Projects-Gallery {
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    list-style-type: none;
+}
+
+li.Project {
+    padding: 0;
+    flex: calc(0.1 + (var(--active-lerp, 0) * 1));
+    transition: flex 0.2s ease;
+}
+li.Project:is(:hover, :focus-within) {
+    --active-lerp: var(--lerp-0);
+    z-index: 7;
+}
+li.Project:has( + li.Project:is(:hover, :focus-within)), li.Project:is(:hover, :focus-within) + li.Project {
+    --active-lerp: var(--lerp-1);
+    z-index: 6;
+}
+li.Project:has( + li.Project:is(:hover, :focus-within)), li.Project:is(:hover, :focus-within) + li.Project {
+    --active-lerp: var(--lerp-1);
+    z-index: 6;
+}
+li.Project:has( + li.Project + li.Project:is(:hover, :focus-within)), li.Project:is(:hover, :focus-within) + li.Project + li.Project {
+    --active-lerp: var(--lerp-2);
+    z-index: 5;
+}
+li.Project:has( + li.Project + li.Project + li.Project:is(:hover, :focus-within)), li.Project:is(:hover, :focus-within) + li.Project + li.Project + li.Project {
+    --active-lerp: var(--lerp-3);
+    z-index: 4;
+}
+li.Project:has( + li.Project + li.Project + li.Project + li.Project:is(:hover, :focus-within)), li.Project:is(:hover, :focus-within) + li.Project + li.Project + li.Project + li.Project {
+    --active-lerp: var(--lerp-4);
+    z-index: 3;
+}
+li.Project:has( + li.Project + li.Project + li.Project + li.Project + li.Project:is(:hover, :focus-within)), li.Project:is(:hover, :focus-within) + li.Project + li.Project + li.Project + li.Project + li.Project {
+    --active-lerp: var(--lerp-5);
+    z-index: 2;
+}
+li.Project:has( + li.Project + li.Project + li.Project + li.Project + li.Project + li.Project:is(:hover, :focus-within)), li.Project:is(:hover, :focus-within) + li.Project + li.Project + li.Project + li.Project + li.Project + li.Project {
+    --active-lerp: var(--lerp-6);
+    z-index: 1;
+}
+img.Project-Images {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease;
+}
+figcaption.Project-Figure-Captions {
+    text-align: center;
+    color: black;
+    font-size: 10px;
+}
+a.Project-Links {
+    outline-offset: 4px;
+}
+
+/* Footer */
+
+div.Footer-Container {
+    background-color: rgb(232,242,254);
+    padding-top: 10px;
+}
+div.Footer-Container h3 {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+ul.Footer-Column {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    list-style: none;
+}
+ul.Footer-Column a {
+    text-decoration: none;
+    color: #5aaafb;
+    opacity: .75;
+}
+ul.Footer-Column a:hover {
+    opacity: .95;
+}
+@media (max-width: 767px) {
+    div.Footer-Container div.Item:not(.Social) {
+        text-align: center;
+    }
+}
+div.Footer-Paragraph {
+    text-align: center;
+    opacity: .80;
+}
+div.Footer-Container div.Item.Social {
+    text-align: center;
+}
+div.Footer-Container div.Item.Social > a {
+    margin: 0 3px;
+    display: inline-block;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.4);
+    border-radius: 50%;
+    line-height: 36px;
+    width: 36px;
+    height: 36px;
+    color: #87c3fe;
+    font-size: 25px;
+    opacity: .75;
+}
+div.Footer-Container div.Item.Social > a:hover {
+    box-shadow: #8dc6ff;
+    opacity: 0.95;
+}
+div.Footer-Container .Copyright {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.6;
+}
